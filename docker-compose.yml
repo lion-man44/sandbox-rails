@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    volumes:
+      - ./docker/volumes/db/mysql:/var/lib/mysql
+  app:
+    build: .
+    command: tail -f /dev/null
+    volumes:
+      - ./:/usr/src/sandbox-rails
