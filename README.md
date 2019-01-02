@@ -1,24 +1,17 @@
-# README
+## 使い方
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### build方法
+```sh
+docker-compose up --build
+```
 
-Things you may want to cover:
+### consoleへの入り方
+```sh
+docker-compose exec app ./bin/rails c
+```
 
-* Ruby version
+### 中への入り方
+```sh
+docker-compose exec app ash
+```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
